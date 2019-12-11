@@ -1,0 +1,53 @@
+﻿@model coursemanger.Models.coursemanagements
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>coursemanagements</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.classid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.classid)
+            @Html.ValidationMessageFor(model => model.classid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.courseid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.courseid)
+            @Html.ValidationMessageFor(model => model.courseid)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.teacherid)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.teacherid)
+            @Html.ValidationMessageFor(model => model.teacherid)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

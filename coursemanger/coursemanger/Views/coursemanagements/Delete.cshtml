@@ -1,0 +1,39 @@
+﻿@model coursemanger.Models.coursemanagements
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>coursemanagements</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.classid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.classid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.courseid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.courseid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.teacherid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.teacherid)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

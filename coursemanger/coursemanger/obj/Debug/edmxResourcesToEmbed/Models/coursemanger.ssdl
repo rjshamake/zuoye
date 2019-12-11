@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="coursemangerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="coursemangerModelStoreContainer">
+    <EntitySet Name="classes" EntityType="coursemangerModel.Store.classes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="course" EntityType="coursemangerModel.Store.course" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="coursemanagements" EntityType="coursemangerModel.Store.coursemanagements" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="students" EntityType="coursemangerModel.Store.students" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="teachers" EntityType="coursemangerModel.Store.teachers" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="classes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="teacherid" Type="int" />
+  </EntityType>
+  <EntityType Name="course">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="coursemanagements">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="classid" Type="int" Nullable="false" />
+    <Property Name="courseid" Type="int" Nullable="false" />
+    <Property Name="teacherid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="students">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="classid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="teachers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+</Schema>
