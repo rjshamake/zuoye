@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="coursemangerModelStoreContainer" CdmEntityContainer="coursemangerEntities">
+    <EntitySetMapping Name="classes">
+      <EntityTypeMapping TypeName="coursemangerModel.classes">
+        <MappingFragment StoreEntitySet="classes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="teacherid" ColumnName="teacherid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teachers">
+      <EntityTypeMapping TypeName="coursemangerModel.teachers">
+        <MappingFragment StoreEntitySet="teachers">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="coursemangerModel.students">
+        <MappingFragment StoreEntitySet="students">
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="course">
+      <EntityTypeMapping TypeName="coursemangerModel.course">
+        <MappingFragment StoreEntitySet="course">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coursemanagements">
+      <EntityTypeMapping TypeName="coursemangerModel.coursemanagements">
+        <MappingFragment StoreEntitySet="coursemanagements">
+          <ScalarProperty Name="teacherid" ColumnName="teacherid" />
+          <ScalarProperty Name="courseid" ColumnName="courseid" />
+          <ScalarProperty Name="classid" ColumnName="classid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
